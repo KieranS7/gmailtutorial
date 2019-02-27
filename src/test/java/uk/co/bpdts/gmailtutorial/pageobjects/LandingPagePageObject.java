@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 public class LandingPagePageObject {
-    WebDriver driver;
+   private WebDriver driver;
 
     public LandingPagePageObject(WebDriver driver) {
         this.driver = driver;
@@ -14,7 +14,14 @@ public class LandingPagePageObject {
     By createanaccount = By.xpath("//a[@class='gmail-nav__nav-link gmail-nav__nav-link__create-account']");
 
     public WebElement Createaccount() {
+
         return driver.findElement(createanaccount);
 
     }
+
+    public SignUpPagePageObject signUp() {
+        return new SignUpPagePageObject(driver);
+
+    }
+
 }
