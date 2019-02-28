@@ -22,23 +22,23 @@ public class SignUpPagePageObject {
     By nextbutton = By.xpath("//*[@id=\"accountDetailsNext\"]/content/span");
 
 
-    public SignUpPagePageObject firstName(String firstname) {driver.findElement(By.id(firstname)).sendKeys(firstname);
+    public SignUpPagePageObject firstName(String targetFirstname) {driver.findElement(firstname).sendKeys(targetFirstname);
     return this;
     }
 
-    public SignUpPagePageObject surname(String surname) {driver.findElement(By.id(surname)).sendKeys(surname);
+    public SignUpPagePageObject surname(String targetSurname) {driver.findElement(surname).sendKeys(targetSurname);
         return this;
     }
 
-    public SignUpPagePageObject enterUsername(String username) {driver.findElement(By.id(username)).sendKeys(username);
+    public SignUpPagePageObject enterUsername(String targetUsername) {driver.findElement(username).sendKeys(targetUsername);
     return this;
     }
 
-    public SignUpPagePageObject password(String password) {driver.findElement(By.name(password)).sendKeys(password);
+    public SignUpPagePageObject password(String targetPassword) {driver.findElement(password).sendKeys(targetPassword);
         return this;
     }
 
-    public SignUpPagePageObject confirm(String confirm) {driver.findElement(By.name(confirm)).sendKeys(confirm);
+    public SignUpPagePageObject confirm(String targetConfirm) {driver.findElement(confirm).sendKeys(targetConfirm);
         return this;
     }
 

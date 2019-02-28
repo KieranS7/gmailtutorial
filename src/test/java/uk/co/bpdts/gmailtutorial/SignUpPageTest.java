@@ -18,10 +18,10 @@ import java.sql.Driver;
 import java.util.ArrayList;
 
 public class SignUpPageTest {
-private WebDriver driver;
+    private WebDriver driver;
 
     @Before
-    public void windowmanagement() throws MalformedURLException{
+    public void windowmanagement() throws MalformedURLException {
         System.setProperty("webdriver.chrome.driver", "/Users/kieran.slater/IdeaProjects/gmailtutorial/src/test/resources/chromedriver");
         WebDriver driver = new ChromeDriver();
         driver.get("https://www.google.com/intl/en-GB/gmail/about/#");
@@ -32,7 +32,6 @@ private WebDriver driver;
     public void SignUp() {
 
         LandingPagePageObject land = new LandingPagePageObject(driver);
-        //land.createAccount.click();
         SignUpPagePageObject signUpPagePageObject = land.signUp();
 
         SignUpPagePageObject signup = new SignUpPagePageObject(driver);
@@ -41,7 +40,6 @@ private WebDriver driver;
         signup.enterUsername("jsmithselenium");
         signup.password("Newpassword_123");
         signup.confirm("Newpassword_123");
-
 
 
     }

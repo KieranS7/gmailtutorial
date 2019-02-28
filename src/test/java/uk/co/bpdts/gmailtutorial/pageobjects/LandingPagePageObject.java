@@ -23,7 +23,6 @@ public class LandingPagePageObject {
     }*/
 
     public SignUpPagePageObject signUp() {
-        //driver.findElement(By.xpath("//a[@class='gmail-nav__nav-link gmail-nav__nav-link__create-account']")).click();
         return new SignUpPagePageObject(driver);
 
     }
