@@ -32,16 +32,16 @@ private WebDriver driver;
     public void SignUp() {
 
         LandingPagePageObject land = new LandingPagePageObject(driver);
-        land.Createaccount().click();
-
+        //land.createAccount.click();
+        SignUpPagePageObject signUpPagePageObject = land.signUp();
 
         SignUpPagePageObject signup = new SignUpPagePageObject(driver);
-        signup.Firstname().sendKeys("John");
-        signup.Surname().sendKeys("Smith");
-        signup.Username().sendKeys("jsmithselenium");
-        signup.Password().sendKeys("Newpassword_123");
-        signup.Confirm().sendKeys("Newpassword_123");
-        signup.Nextbutton().click();
+        signup.firstName("John");
+        signup.surname("Smith");
+        signup.enterUsername("jsmithselenium");
+        signup.password("Newpassword_123");
+        signup.confirm("Newpassword_123");
+
 
 
     }

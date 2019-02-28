@@ -11,15 +11,19 @@ public class LandingPagePageObject {
         this.driver = driver;
     }
 
-    By createanaccount = By.xpath("//a[@class='gmail-nav__nav-link gmail-nav__nav-link__create-account']");
+    public LandingPagePageObject createAccount() {
+        driver.findElement(By.xpath("//a[@class='gmail-nav__nav-link gmail-nav__nav-link__create-account']")).click();
+        return this;
+    }
 
-    public WebElement Createaccount() {
+    /*public WebElement createAccount() {
 
         return driver.findElement(createanaccount);
 
-    }
+    }*/
 
     public SignUpPagePageObject signUp() {
+        //driver.findElement(By.xpath("//a[@class='gmail-nav__nav-link gmail-nav__nav-link__create-account']")).click();
         return new SignUpPagePageObject(driver);
 
     }
