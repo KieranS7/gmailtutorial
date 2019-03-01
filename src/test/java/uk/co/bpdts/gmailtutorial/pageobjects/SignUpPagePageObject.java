@@ -10,7 +10,8 @@ public class SignUpPagePageObject {
 
     WebDriver driver;
 
-    public SignUpPagePageObject(WebDriver driver) {
+    public SignUpPagePageObject(WebDriver driver)
+    {
         this.driver = driver;
     }
 
@@ -22,24 +23,28 @@ public class SignUpPagePageObject {
     By nextbutton = By.xpath("//*[@id=\"accountDetailsNext\"]/content/span");
 
 
-    public SignUpPagePageObject firstName(String targetFirstname) {driver.findElement(firstname).sendKeys(targetFirstname);
-    return this;
+    public void firstName(String targetFirstname)
+    {
+        driver.findElement(firstname).sendKeys(targetFirstname);
     }
 
-    public SignUpPagePageObject surname(String targetSurname) {driver.findElement(surname).sendKeys(targetSurname);
-        return this;
+    public void surname(String targetSurname)
+    {
+        driver.findElement(surname).sendKeys(targetSurname);
     }
 
-    public SignUpPagePageObject enterUsername(String targetUsername) {driver.findElement(username).sendKeys(targetUsername);
-    return this;
+    public void enterUsername(String targetUsername)
+    {
+        driver.findElement(username).sendKeys(targetUsername);
     }
 
     public SignUpPagePageObject password(String targetPassword) {driver.findElement(password).sendKeys(targetPassword);
         return this;
     }
 
-    public SignUpPagePageObject confirm(String targetConfirm) {driver.findElement(confirm).sendKeys(targetConfirm);
-        return this;
+    public void confirm(String targetConfirm)
+    {
+        driver.findElement(confirm).sendKeys(targetConfirm);
     }
 
     /*public SignUpPagePageObject nextButton(String nextButton) {driver.findElement(By.xpath(nextbutton)).click();
