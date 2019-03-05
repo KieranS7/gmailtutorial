@@ -21,30 +21,32 @@ public class SignUpPageTest {
     private WebDriver driver;
 
     @Before
-    public void windowmanagement() throws MalformedURLException {
+    public void windowmanagement() {
         System.setProperty("webdriver.chrome.driver", "/Users/kieran.slater/IdeaProjects/gmailtutorial/src/test/resources/chromedriver");
-        WebDriver driver = new ChromeDriver();
+        // Kieran, this is the line that is broken - we're only declearing WebDriver internally to this method
+        // WebDriver driver = new ChromeDriver();
+        // If we change that line ^^ to this line next line, everything starts working!
+        this.driver = new ChromeDriver();
         driver.get("https://www.google.com/intl/en-GB/gmail/about/#");
         //driver.manage().window().maximize();
     }
 
     @Test
     public void SignUp() {
-
         LandingPagePageObject land = new LandingPagePageObject(driver);
         SignUpPagePageObject signUpPagePageObject = land.signUp();
 
-        SignUpPagePageObject signup = new SignUpPagePageObject(driver);
-        signup.firstName("John");
-        signup.surname("Smith");
-        signup.enterUsername("jsmithselenium");
-        signup.password("Newpassword_123");
-        signup.confirm("Newpassword_123");
-
-
+        signUpPagePageObject
+            .firstName("John")
+            .surname("Smith")
+            .enterUsername("jsmithselenium")
+            .password("Newpassword_123")
+            .confirm("Newpassword_123");
     }
-/*@After
 
-    public void tearDown() {driver.quit;}*/
+    @After
+    public void tearDown() {
+        driver.quit();
+    }
 
 }
