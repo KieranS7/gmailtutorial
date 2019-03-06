@@ -46,7 +46,7 @@ public class SignUpPagePageObject {
         return this;
     }
 
-    public SignUpPagePageObject nextbutton() {
+    public VerifyNumberPageFactory nextButton() {
         WebDriverWait wait = new WebDriverWait(driver, 5);
         wait.until(ExpectedConditions.elementToBeClickable(nextButton)).click();
         return new VerifyNumberPageFactory(driver);
