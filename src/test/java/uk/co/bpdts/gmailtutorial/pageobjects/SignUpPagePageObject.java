@@ -46,10 +46,10 @@ public class SignUpPagePageObject {
         return this;
     }
 
-    public void nextbutton() {
+    public SignUpPagePageObject nextbutton() {
         WebDriverWait wait = new WebDriverWait(driver, 5);
         wait.until(ExpectedConditions.elementToBeClickable(nextButton)).click();
-        //return new VerifyNumberPageFactory(driver);
+        return null;
         // TODO: This should return the new page that we will end up on
     }
 

@@ -11,6 +11,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import uk.co.bpdts.gmailtutorial.pageobjects.LandingPagePageObject;
 import uk.co.bpdts.gmailtutorial.pageobjects.SignUpPagePageObject;
+import uk.co.bpdts.gmailtutorial.pageobjects.VerifyNumberPageFactory;
 
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -42,6 +43,10 @@ public class SignUpPageTest {
             .enterUsername("jsmithselenium")
             .password("Newpassword_123")
             .confirm("Newpassword_123");
+
+        /*VerifyNumberPageFactory number = new signUpPagePageObject.nextbutton();
+        VerifyNumberPageFactory */
+
     }
 
     @After
