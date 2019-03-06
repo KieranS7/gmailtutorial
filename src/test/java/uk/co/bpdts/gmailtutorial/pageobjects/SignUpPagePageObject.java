@@ -13,7 +13,7 @@ public class SignUpPagePageObject {
         this.driver = driver;
     }
 
-    By firstNameField = By.id("firstName");
+    By firstNameField = By.xpath("//input[@name='firstName']");
     By surnameField = By.id("lastName");
     By usernameField = By.id("username");
     By passwordField = By.name("Passwd");
@@ -49,7 +49,7 @@ public class SignUpPagePageObject {
     public void nextbutton() {
         WebDriverWait wait = new WebDriverWait(driver, 5);
         wait.until(ExpectedConditions.elementToBeClickable(nextButton)).click();
-
+        //return new VerifyNumberPageFactory(driver);
         // TODO: This should return the new page that we will end up on
     }
 
