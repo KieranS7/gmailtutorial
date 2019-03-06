@@ -4,18 +4,10 @@ package uk.co.bpdts.gmailtutorial;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.remote.RemoteWebDriver;
 import uk.co.bpdts.gmailtutorial.pageobjects.LandingPagePageObject;
 import uk.co.bpdts.gmailtutorial.pageobjects.SignUpPagePageObject;
-
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.sql.Driver;
-import java.util.ArrayList;
 
 public class SignUpPageTest {
     private WebDriver driver;
@@ -34,7 +26,7 @@ public class SignUpPageTest {
     @Test
     public void SignUp() {
         LandingPagePageObject land = new LandingPagePageObject(driver);
-        SignUpPagePageObject signUpPagePageObject = land.signUp();
+        SignUpPagePageObject signUpPagePageObject = land.openCreateAccountPage();
 
         signUpPagePageObject
             .firstName("John")
