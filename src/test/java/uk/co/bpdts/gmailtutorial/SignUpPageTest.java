@@ -8,6 +8,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import uk.co.bpdts.gmailtutorial.pageobjects.LandingPagePageObject;
 import uk.co.bpdts.gmailtutorial.pageobjects.SignUpPagePageObject;
+import uk.co.bpdts.gmailtutorial.pageobjects.VerifyNumberPageFactory;
 
 public class SignUpPageTest {
     private WebDriver driver;
@@ -34,6 +35,8 @@ public class SignUpPageTest {
             .enterUsername("jsmithselenium")
             .password("Newpassword_123")
             .confirm("Newpassword_123");
+
+        VerifyNumberPageFactory number = signUpPagePageObject.nextButton();
     }
 
     @After

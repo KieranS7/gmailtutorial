@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class LandingPagePageObject {
-   private WebDriver driver;
+    private WebDriver driver;
 
     public LandingPagePageObject(WebDriver driver) {
         this.driver = driver;
