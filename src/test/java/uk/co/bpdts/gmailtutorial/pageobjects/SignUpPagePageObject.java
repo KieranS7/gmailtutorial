@@ -49,7 +49,7 @@ public class SignUpPagePageObject {
     public SignUpPagePageObject nextbutton() {
         WebDriverWait wait = new WebDriverWait(driver, 5);
         wait.until(ExpectedConditions.elementToBeClickable(nextButton)).click();
-        return null;
+        return new VerifyNumberPageFactory(driver);
         // TODO: This should return the new page that we will end up on
     }
 

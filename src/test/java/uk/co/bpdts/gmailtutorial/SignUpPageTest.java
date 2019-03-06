@@ -44,9 +44,7 @@ public class SignUpPageTest {
             .password("Newpassword_123")
             .confirm("Newpassword_123");
 
-        /*VerifyNumberPageFactory number = new signUpPagePageObject.nextbutton();
-        VerifyNumberPageFactory */
-
+        VerifyNumberPageFactory number = new signUpPagePageObject.nextbutton();
     }
 
     @After

@@ -15,11 +15,13 @@ public class VerifyNumberPageFactory {
         PageFactory.initElements(driver, this);
     }
 
-    @FindBy(xpath = "//input[@id='phoneNumberId']");
+    @FindBy(xpath = "//input[@id='phoneNumberId']")
     WebElement phoneNumber;
 
+
     public WebElement phoneNumber() {
-        return phoneNumber;
+        phoneNumber.click();
+        return null;
     }
 }
 
