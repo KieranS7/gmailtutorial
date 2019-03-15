@@ -25,9 +25,10 @@ public class SignUpPageTest {
     }
 
     @Test
-    public void SignUp() {
+    public void SignUp() throws InterruptedException {
         LandingPagePageObject land = new LandingPagePageObject(driver);
         SignUpPagePageObject signUpPagePageObject = land.openCreateAccountPage();
+
 
         signUpPagePageObject
             .firstName("John")
@@ -37,6 +38,8 @@ public class SignUpPageTest {
             .confirm("Newpassword_123");
 
         VerifyNumberPageFactory number = signUpPagePageObject.nextButton();
+        number.enterPhoneNumber("07123456780");
+
     }
 
     @After

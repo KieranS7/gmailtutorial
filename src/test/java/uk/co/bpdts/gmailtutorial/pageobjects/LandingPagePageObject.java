@@ -10,8 +10,8 @@ public class LandingPagePageObject {
         this.driver = driver;
     }
 
-    public SignUpPagePageObject openCreateAccountPage() {
-        driver.findElement(By.xpath("//a[@class='gmail-nav__nav-link gmail-nav__nav-link__create-account']")).click();
+    public SignUpPagePageObject openCreateAccountPage() throws InterruptedException {
+        driver.findElement(By.xpath("//a[contains(text(), 'Create an account')]")).click();
         return new SignUpPagePageObject(driver);
     }
 
